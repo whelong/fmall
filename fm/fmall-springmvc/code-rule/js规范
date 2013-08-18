@@ -1,0 +1,12 @@
+1.js根路径位于webapp/resources/javascripts中
+
+2.公共到js文件根路径位于webapp/resources/javascripts/common中，根据需要建立子文件夹，这里包括js的util，
+所有页面共用到js对象，和外部引入的js文件
+
+3.每个页面有一个js文件，处理当前页面需要到js,路径位于webapp/resources/javascripts/page下，命名为页面名字+“.js”
+
+4.采用面向对象思想设计js,尽量抽取公共部分封装成对象，好处一是增加可重用性，二是减少暴露在外部到js变量,减少冲突，面向对象采用prototype方法
+
+5.在页面中，把<head>节点之间嵌入一段js,把需要从后台转换成js变量写出来，其他在页面尽量不出现js代码
+
+6.写好注释

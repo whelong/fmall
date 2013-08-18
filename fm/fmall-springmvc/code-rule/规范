@@ -1,0 +1,12 @@
+1. spring mvc 架构
+2.注解和命名规则
+3.controller层注意事项：
+   1>统一返回ModelAndView
+   2>如果过滤传入到参数
+4.切面防止sql注入
+5.如何集成mongodb,mongodb底层api
+6.freemarker嵌套规则和例子
+7.<#escape>标签防制
+8.针对每个项目的api
+9.freemarker如何嵌套防止脚本注入
+10.js规则

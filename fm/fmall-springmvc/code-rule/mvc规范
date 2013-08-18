@@ -1,0 +1,12 @@
+1.spring ioc 注入采用注解
+
+2.Controller命名采用 "业务名"+"Action",@RequestMapping("/demo")即请求路径名称是"业务名"，小写
+
+3.service 每个service均有一个接口和一个实现类，接口命名 "I"+"业务名"+"Service",实现类命名"业务名"+"ServiceImpl",
+注解名称为"业务名"+"Service",在Controller只能注入service层,如下
+	@Resource
+	private IDemoService demoService;
+	
+4.Dao,一个接口一个实现类，每个业务逻辑一个Dao类，接口需要继承IDemoDao，实现类需要继承MorphiaBasicDao<E, I>，例如
+   public class DemoDaoImpl extends MorphiaBasicDao<Hotel, ObjectId> implements IDemoDao。
+   
