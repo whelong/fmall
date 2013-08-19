@@ -49,6 +49,7 @@ return this.userDao.insert(user);
 
 public List<User> selectAll() {
 return this.userDao.selectAll();
+//	return null;
 }
 
 public int update(User user) {

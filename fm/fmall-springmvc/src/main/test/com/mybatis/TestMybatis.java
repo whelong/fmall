@@ -33,7 +33,7 @@ UserService userService = null;
 @Before
 public void initContext(){
 //this.context = new FileSystemXmlApplicationContext("WebRoot/WEB-INF/applicationContext.xml");
-	this.context=new ClassPathXmlApplicationContext("resources/spring/*.xml");
+	this.context=new ClassPathXmlApplicationContext("classpath:spring/*.xml");
 this.userService = (UserService) context.getBean("userService");
 }
 

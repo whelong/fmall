@@ -12,8 +12,8 @@
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="c3p0DataSource" />
 		<property name="configLocation"
-			value="classpath:/resources/db/mybatis-configuration.xml" />
-		<property name="mapperLocations" value="classpatch:/resources/db/*Mapper.xml" />
+			value="classpath:db/config/mybatis-configuration.xml" />
+		<property name="mapperLocations" value="classpath:db/mappers/*Mapper.xml" />
 		<property name="typeAliasesPackage" value="com.fmall.springmvc.daoexample.pojo" />
 	</bean>
 
