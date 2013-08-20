@@ -35,7 +35,7 @@
 		location="/resources/javascripts/" />
 	<mvc:resources mapping="/css/**" location="/css/" />
 	<mvc:resources mapping="/swf/**" location="/swf/" />
-
+	<mvc:resources mapping="/index.html" location="/index.html" />
 	<bean
 		class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping">
 		<property name="interceptors">
