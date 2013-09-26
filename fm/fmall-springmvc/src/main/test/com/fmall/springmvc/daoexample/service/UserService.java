@@ -21,16 +21,16 @@ import com.fmall.springmvc.daoexample.pojo.User;
 */
 public interface UserService {
 
-public int insert(User user);
+	public int insert(User user);
 
-public int update(User user);
+	public int update(User user);
 
-public int delete(String userName);
+	public int delete(String userName);
 
-public List<User> selectAll();
+	public List<User> selectAll();
 
-public int countAll();
+	public int countAll();
 
-public User findByUserName(String userName);
+	public User findByUserName(String userName);
 }
  

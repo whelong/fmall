@@ -1,0 +1,107 @@
+/**
+ * 
+ */
+package com.fmall.springmvc.daoexample.service.impl;
+
+import java.util.List;
+
+import com.fmall.springmvc.daoexample.dao.SavingsRegionDao;
+import com.fmall.springmvc.daoexample.service.SavingsRegionService;
+import com.fmall.springmvc.generate.pojo.SavingsRegion;
+
+/**
+ * @author WHL
+ *
+ */
+public class SavingsRegionServiceImpl implements SavingsRegionService {
+
+	SavingsRegionDao srd;
+	/**
+	 * 
+	 */
+	public void setSavingsRegionDao(SavingsRegionDao srd) {
+		this.srd = srd;
+	}
+
+	/* (non-Javadoc)
+	 * @see com.fmall.springmvc.daoexample.service.SavingsRegionService#insert(com.fmall.springmvc.generate.pojo.SavingsRegion)
+	 */
+	@Override
+	public int insert(SavingsRegion sr) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	/* (non-Javadoc)
+	 * @see com.fmall.springmvc.daoexample.service.SavingsRegionService#update(com.fmall.springmvc.generate.pojo.SavingsRegion)
+	 */
+	@Override
+	public int update(SavingsRegion sr) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	/* (non-Javadoc)
+	 * @see com.fmall.springmvc.daoexample.service.SavingsRegionService#deleteById(int)
+	 */
+	@Override
+	public int deleteById(int regionId) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	/* (non-Javadoc)
+	 * @see com.fmall.springmvc.daoexample.service.SavingsRegionService#deleteByCity(java.lang.String)
+	 */
+	@Override
+	public int deleteByCity(String city) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	/* (non-Javadoc)
+	 * @see com.fmall.springmvc.daoexample.service.SavingsRegionService#selectAll()
+	 */
+	@Override
+	public List selectAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	/* (non-Javadoc)
+	 * @see com.fmall.springmvc.daoexample.service.SavingsRegionService#countAll()
+	 */
+	@Override
+	public int countAll() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	/* (non-Javadoc)
+	 * @see com.fmall.springmvc.daoexample.service.SavingsRegionService#findById(int)
+	 */
+	@Override
+	public SavingsRegion findById(int regionId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	/* (non-Javadoc)
+	 * @see com.fmall.springmvc.daoexample.service.SavingsRegionService#findByCity(java.lang.String)
+	 */
+	@Override
+	public SavingsRegion findByCity(String city) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	/* (non-Javadoc)
+	 * @see com.fmall.springmvc.daoexample.service.SavingsRegionService#findByProvince(java.lang.String)
+	 */
+	@Override
+	public List findByProvince(String province) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

@@ -1,0 +1,27 @@
+1379857039156	Delete element
+1379950368906	Copy compilation unit
+1379950388984	Rename type 'SavingsService'
+1379951188390	Copy file
+1379953883093	Copy file
+1379953907453	Copy compilation unit
+1379953921421	Rename resource 'BankDaoMapper.xml'
+1380031945562	Delete element
+1380032768812	Copy file
+1380033069750	Copy compilation unit
+1380034288875	Copy compilation unit
+1380035428187	Copy file
+1380116115843	Delete elements
+1380117963937	Copy compilation unit
+1380117980171	Rename type 'SavingsBankDao'
+1380119605812	Copy compilation unit
+1380119623859	Delete element
+1380119639890	Copy compilation units
+1380119669593	Rename type 'SavingsRegionDao'
+1380119708140	Rename type 'SavingsTypeDao'
+1380122425093	Encapsulate field 'savingsProvince'
+1380122441843	Encapsulate field 'savingsCity'
+1380207554609	Move compilation units
+1380207849640	Move compilation units
+1380207974921	Move compilation units
+1380208012625	Move compilation units
+1380208101156	Move compilation units

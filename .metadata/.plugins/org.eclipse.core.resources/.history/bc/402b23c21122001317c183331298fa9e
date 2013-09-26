@@ -1,0 +1,18 @@
+/**
+ * 
+ */
+package com.fmall.springmvc.service.savings;
+
+import java.util.List;
+
+import com.fmall.springmvc.javabean.savings.SavingsFetchCondition;
+import com.fmall.springmvc.javabean.savings.SavingsProduct;
+
+/**
+ * @author WHL
+ *
+ */
+public interface ISavingsService {
+
+	List<SavingsProduct> savingsProductList(SavingsFetchCondition sfcond);
+}

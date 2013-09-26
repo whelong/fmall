@@ -1,0 +1,15 @@
+package com.fmall.springmvc.daoexample.service.impl;
+
+public class TestEntry {
+
+	public TestEntry() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public static void main(String[] args) {
+		SavingsServiceImpl ssi = new SavingsServiceImpl();
+		System.out.print(ssi.findById(1).getProductName());
+
+	}
+
+}

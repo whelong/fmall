@@ -1,0 +1,11 @@
+INDEX VERSION 1.122+D:\ÎÒµÄÎÄµµ\GitHub\fmall\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+2973073292.index
+224502230.index
+626298211.index
+4111667778.index
+1108467616.index
+1212149085.index
+2586038576.index
+2921447003.index
+3254818363.index
+2406310316.index

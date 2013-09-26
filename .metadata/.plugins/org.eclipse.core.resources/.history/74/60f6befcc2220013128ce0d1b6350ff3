@@ -1,0 +1,20 @@
+/**
+ * 
+ */
+package com.fmall.springmvc.generate.mapper;
+
+import java.util.List;
+
+import com.fmall.springmvc.javabean.savings.SavingsFetchCondition;
+import com.fmall.springmvc.javabean.savings.SavingsProduct;
+
+/**
+ * @author WHL
+ *
+ */
+public interface ISavingsService {
+
+	List<SavingsProduct> savingsProductGeneralList(SavingsFetchCondition sfcond);
+	List<SavingsProduct> savingsProductDetailList(SavingsFetchCondition sfcond);
+	List<SavingsProduct> selectAll();
+}

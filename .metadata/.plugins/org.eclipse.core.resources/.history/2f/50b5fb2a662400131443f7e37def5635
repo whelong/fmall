@@ -1,0 +1,86 @@
+/**
+ * 
+ */
+package com.fmall.springmvc.daoexample.service.impl;
+
+import java.util.List;
+
+import com.fmall.springmvc.daoexample.dao.SavingsDao;
+import com.fmall.springmvc.daoexample.service.SavingsService;
+import com.fmall.springmvc.generate.pojo.SavingsProduct;
+import com.fmall.springmvc.generate.pojo.SavingsProductExample;
+import com.fmall.springmvc.generate.pojo.SavingsProductExample.Criteria;
+
+/**
+ * @author Administrator
+ *
+ */
+public class SavingsServiceImpl implements SavingsService {
+
+	private SavingsDao sd;
+	
+	public SavingsService getSavingsService(){
+		return ss;
+	}
+	
+	public void setSavingsService(SavingsService ss){
+		this.ss = ss;
+	}
+	/* (non-Javadoc)
+	 * @see com.fmall.springmvc.daoexample.service.SavingsProductService#insert(com.fmall.springmvc.generate.pojo.SavingsProduct)
+	 */
+	@Override
+	public int insert(SavingsProduct sp) {
+		return this.ss.insert(sp);
+	}
+
+	/* (non-Javadoc)
+	 * @see com.fmall.springmvc.daoexample.service.SavingsProductService#update(com.fmall.springmvc.generate.pojo.SavingsProduct)
+	 */
+	@Override
+	public int update(SavingsProduct sp) {
+		return this.ss.update(sp);
+	}
+
+	/* (non-Javadoc)
+	 * @see com.fmall.springmvc.daoexample.service.SavingsProductService#delete(int)
+	 */
+	@Override
+	public int delete(int id) {
+		return this.ss.delete(id);
+	}
+
+	/* (non-Javadoc)
+	 * @see com.fmall.springmvc.daoexample.service.SavingsProductService#selectAll()
+	 */
+	@Override
+	public List<SavingsService> selectAll() {
+		return this.ss.selectAll();
+	}
+
+	/* (non-Javadoc)
+	 * @see com.fmall.springmvc.daoexample.service.SavingsProductService#countAll()
+	 */
+	@Override
+	public int countAll() {
+		return this.ss.countAll();
+	}
+
+	/* (non-Javadoc)
+	 * @see com.fmall.springmvc.daoexample.service.SavingsProductService#findById(int)
+	 */
+	@Override
+	public SavingsProduct findById(int id) {
+		return this.ss.findById(id);
+	}
+
+	/* (non-Javadoc)
+	 * @see com.fmall.springmvc.daoexample.service.SavingsProductService#findBySelections(java.lang.String)
+	 * selections where clause, to select products by the conditions selected by front end users.
+	 */
+	@Override
+	public List<SavingsProduct> findBySelections(String selections) {
+		return this.ss.findBySelections(selections);
+	}
+
+}

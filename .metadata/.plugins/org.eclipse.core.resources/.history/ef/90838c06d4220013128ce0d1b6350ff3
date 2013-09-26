@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE generatorConfiguration  
+  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"  
+  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">  
+  
+<generatorConfiguration>  
+<!--   classPathEntry:数据库的JDBC驱动的jar包地址：注意是绝对路径  -->
+  <classPathEntry location="D:/test/mysql-connector-java-5.1.24-bin.jar" />  
+  
+<context id="mysql" targetRuntime="MyBatis3">  
+  <commentGenerator>  
+    <!-- 是否去除自动生成的注释 true：是 ： false:否 -->  
+    <property name="suppressAllComments" value="false" />  
+    <!--数据库连接的信息：驱动类、连接地址、用户名、密码 -->  
+  </commentGenerator>  
+  <jdbcConnection driverClass="com.mysql.jdbc.Driver"  
+          connectionURL="jdbc:mysql://localhost:3306/test"  
+          userId="root"  
+          password="mysql">  
+  </jdbcConnection>  
+    <!--  默认false，把JDBC DECIMAL 和 NUMERIC 类型解析为 Integer   
+         true，把JDBC DECIMAL 和 NUMERIC 类型解析为java.math.BigDecimal   
+     -->   
+  <javaTypeResolver >  
+     <property name="forceBigDecimals" value="false" />  
+  </javaTypeResolver>  
+  <!-- targetProject:自动生成代码的位置 -->  
+  <javaModelGenerator targetPackage="com.fmall.springmvc.generate.pojo" targetProject="fmall-springmvc">  
+      <!-- enableSubPackages:是否让schema作为包的后缀 -->       
+      <property name="enableSubPackages" value="true" />  
+    <!-- 从数据库返回的值被清理前后的空格  -->   
+      <property name="trimStrings" value="true" />  
+  </javaModelGenerator>  
+    
+  <sqlMapGenerator targetPackage="db.mappers"  targetProject="fmall-springmvc">  
+       <property name="enableSubPackages" value="false" />  
+  </sqlMapGenerator>  
+    
+  <javaClientGenerator type="XMLMAPPER" targetPackage="com.fmall.springmvc.generate.mapper"  targetProject="fmall-springmvc">  
+    <property name="enableSubPackages" value="true" />  
+  </javaClientGenerator>  
+  <!-- tableName:用于自动生成代码的数据库表；domainObjectName:对应于数据库表的javaBean类名 -->  
+  <table schema="test" tableName="savings_detail" domainObjectName="SavingsProduct" 
+  enableCountByExample="true" 
+  enableUpdateByExample="true"
+  enableDeleteByExample="true" 
+  enableSelectByExample="true"
+  selectByExampleQueryId="true">  
+    
+  </table>  
+</context>  
+   
+</generatorConfiguration>  

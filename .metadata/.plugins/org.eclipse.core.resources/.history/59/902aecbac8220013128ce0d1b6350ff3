@@ -1,0 +1,17 @@
+/**
+ * 
+ */
+package com.fmall.springmvc.generate.mapper;
+
+import java.util.List;
+
+/**
+ * @author WHL
+ *
+ */
+public interface SavingsMapper {
+
+	List<SavingsProduct> savingsProductGeneralList(SavingsFetchCondition sfcond);
+	List<SavingsProduct> savingsProductDetailList(SavingsFetchCondition sfcond);
+	List<SavingsProduct> selectAll();
+}

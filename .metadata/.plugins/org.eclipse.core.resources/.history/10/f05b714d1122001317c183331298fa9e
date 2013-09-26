@@ -1,0 +1,19 @@
+/**
+ * 
+ */
+package com.fmall.springmvc.javabean.savings;
+
+/**
+ * @author Administrator
+ *
+ */
+public class SavingsFetchCondition {
+
+	/**
+	 * 
+	 */
+	public SavingsFetchCondition() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

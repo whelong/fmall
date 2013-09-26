@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package com.fmall.springmvc.service.savings;
+
+/**
+ * @author Administrator
+ *
+ */
+public interface ISearchSavings {
+
+}

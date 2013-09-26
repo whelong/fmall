@@ -1,0 +1,21 @@
+package com.fmall.springmvc.daoexample.service.impl;
+
+import com.mybatis.TestMybatis;
+
+public class TestEntry {
+
+	public TestEntry() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public static void main(String[] args) {
+//		SavingsServiceImpl ssi = new SavingsServiceImpl();
+		TestMybatis tmb = new TestMybatis();
+		tmb.initContext();
+		tmb.insert();
+		tmb.countAll();
+//		System.out.print(tmb.countAll());
+
+	}
+
+}

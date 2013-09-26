@@ -1,0 +1,17 @@
+/**
+ * 
+ */
+package com.fmall.springmvc.service.savings;
+
+import java.util.List;
+
+import com.fmall.springmvc.javabean.savings.SavingsProduct;
+
+/**
+ * @author WHL
+ *
+ */
+public interface ISavingsService {
+
+	List<SavingsProduct> savingsProductList(String regionName, String savingsCurrency, String savingsType, String savingsTerm, String savingsBank);
+}

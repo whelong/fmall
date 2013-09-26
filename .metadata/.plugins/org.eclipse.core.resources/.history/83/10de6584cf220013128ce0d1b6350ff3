@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package com.fmall.springmvc.daoexample.dao;
+
+/**
+ * @author Administrator
+ *
+ */
+public interface SavingsProduct {
+
+}

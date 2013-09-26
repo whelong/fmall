@@ -1,0 +1,19 @@
+/**
+ * 
+ */
+package com.fmall.springmvc.javabean.savings;
+
+/**
+ * @author Administrator
+ *
+ */
+public class Savings {
+
+	/**
+	 * 
+	 */
+	public Savings() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

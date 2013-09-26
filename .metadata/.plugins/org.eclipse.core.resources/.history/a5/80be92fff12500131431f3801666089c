@@ -1,0 +1,31 @@
+/**
+ * 
+ */
+package com.mybatis;
+
+import org.springframework.beans.factory.BeanFactory;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.fmall.springmvc.daoexample.service.SavingsService;
+import com.fmall.springmvc.generate.pojo.SavingsProductExample;
+import com.fmall.springmvc.generate.pojo.SavingsProductExample.Criteria;
+
+/**
+ * @author WHL
+ *
+ */
+public class TestSavingsProduct {
+	BeanFactory context = null;
+	SavingsService savingsService = null;
+	SavingsProductExample spe = new SavingsProductExample();
+
+	public void initContext() {
+		this.context = new ClassPathXmlApplicationContext(
+				"classpath:spring/*.xml");
+		this.savingsService = (SavingsService) context.getBean("savingsService");
+	}
+	
+	public void countAll() {
+		System.out.println("数据库中的记录条数:" + savingsService.countAll());
+	}
+}

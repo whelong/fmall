@@ -1,0 +1,34 @@
+/**
+ * 
+ */
+package com.fmall.springmvc.daoexample.dao;
+
+import java.util.List;
+
+import com.fmall.springmvc.generate.pojo.SavingsBank;
+import com.fmall.springmvc.generate.pojo.SavingsProduct;
+import com.fmall.springmvc.generate.pojo.SavingsRegion;
+
+/**
+ * @author WHL
+ *
+ */
+public interface SavingsRegionDao {
+
+    public int insert(String province, String city);
+    
+    public int update(SavingsRegion sr);
+   
+    public int deleteById(int regionId);
+    
+    public int deleteByName(String city);
+   
+    public List selectAll();
+   
+    public int countAll();
+   
+    public SavingsBank findById(int bankId);
+    
+    public SavingsBank findByName(String bankName);
+
+}

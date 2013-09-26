@@ -1,0 +1,142 @@
+/**
+ * 
+ */
+package com.fmall.springmvc.javabean.savings;
+
+/**
+ * @author WHL
+ *
+ */
+public class SavingsProduct {
+	private String savingsProvince;
+	private String savingsCity;
+	private String savingsCurrency;
+	private String savingsType;
+	private String savingsTerm;
+	private String savingsBank;
+	private String productName;
+	private double productInterestRate;
+	private double startAmount;
+	private String productComments;
+	/**
+	 * @return the savingsProvince
+	 */
+	public String getSavingsProvince() {
+		return savingsProvince;
+	}
+	/**
+	 * @param savingsProvince the savingsProvince to set
+	 */
+	public void setSavingsProvince(String savingsProvince) {
+		this.savingsProvince = savingsProvince;
+	}
+	/**
+	 * @return the savingsCity
+	 */
+	public String getSavingsCity() {
+		return savingsCity;
+	}
+	/**
+	 * @param savingsCity the savingsCity to set
+	 */
+	public void setSavingsCity(String savingsCity) {
+		this.savingsCity = savingsCity;
+	}
+	/**
+	 * @return the savingsCurrency
+	 */
+	public String getSavingsCurrency() {
+		return savingsCurrency;
+	}
+	/**
+	 * @param savingsCurrency the savingsCurrency to set
+	 */
+	public void setSavingsCurrency(String savingsCurrency) {
+		this.savingsCurrency = savingsCurrency;
+	}
+	/**
+	 * @return the savingsType
+	 */
+	public String getSavingsType() {
+		return savingsType;
+	}
+	/**
+	 * @param savingsType the savingsType to set
+	 */
+	public void setSavingsType(String savingsType) {
+		this.savingsType = savingsType;
+	}
+	/**
+	 * @return the savingsTerm
+	 */
+	public String getSavingsTerm() {
+		return savingsTerm;
+	}
+	/**
+	 * @param savingsTerm the savingsTerm to set
+	 */
+	public void setSavingsTerm(String savingsTerm) {
+		this.savingsTerm = savingsTerm;
+	}
+	/**
+	 * @return the savingsBank
+	 */
+	public String getSavingsBank() {
+		return savingsBank;
+	}
+	/**
+	 * @param savingsBank the savingsBank to set
+	 */
+	public void setSavingsBank(String savingsBank) {
+		this.savingsBank = savingsBank;
+	}
+	/**
+	 * @return the productName
+	 */
+	public String getProductName() {
+		return productName;
+	}
+	/**
+	 * @param productName the productName to set
+	 */
+	public void setProductName(String productName) {
+		this.productName = productName;
+	}
+	/**
+	 * @return the productInterestRate
+	 */
+	public double getProductInterestRate() {
+		return productInterestRate;
+	}
+	/**
+	 * @param productInterestRate the productInterestRate to set
+	 */
+	public void setProductInterestRate(double productInterestRate) {
+		this.productInterestRate = productInterestRate;
+	}
+	/**
+	 * @return the startAmount
+	 */
+	public double getStartAmount() {
+		return startAmount;
+	}
+	/**
+	 * @param startAmount the startAmount to set
+	 */
+	public void setStartAmount(double startAmount) {
+		this.startAmount = startAmount;
+	}
+	/**
+	 * @return the productComments
+	 */
+	public String getProductComments() {
+		return productComments;
+	}
+	/**
+	 * @param productComments the productComments to set
+	 */
+	public void setProductComments(String productComments) {
+		this.productComments = productComments;
+	}
+	
+}

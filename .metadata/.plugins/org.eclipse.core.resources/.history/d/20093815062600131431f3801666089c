@@ -1,0 +1,52 @@
+/**
+ * 
+ */
+package com.mybatis;
+
+import org.springframework.beans.factory.BeanFactory;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.fmall.springmvc.daoexample.service.SavingsBankService;
+import com.fmall.springmvc.daoexample.service.SavingsRegionService;
+import com.fmall.springmvc.daoexample.service.SavingsService;
+import com.fmall.springmvc.daoexample.service.SavingsTypeService;
+import com.fmall.springmvc.generate.pojo.SavingsProductExample;
+import com.fmall.springmvc.generate.pojo.SavingsProductExample.Criteria;
+import com.fmall.springmvc.javabean.savings.SavingsFetchCondition;
+
+/**
+ * @author WHL
+ *
+ */
+public class TestSavingsProduct {
+	BeanFactory context = null;
+	SavingsService savingsService = null;
+	SavingsRegionService srs = null;
+	SavingsBankService sbs = null;
+	SavingsTypeService sts = null;
+
+	public void initContext() {
+		this.context = new ClassPathXmlApplicationContext(
+				"classpath:spring/*.xml");
+		this.savingsService = (SavingsService) context.getBean("savingsService");
+		this.srs = (SavingsRegionService) context.getBean("savingsRegionService");
+		this.sbs = (SavingsBankService) context.getBean("savingsBankService");
+		this.sts = (SavingsTypeService) context.getBean("savingsTypeService");
+	}
+	
+	public void countAll() {
+		System.out.println("数据库中的记录条数:" + savingsService.countAll());
+		System.out.println("数据库中的记录条数:" + srs.countAll());
+		System.out.println("数据库中的记录条数:" + sbs.countAll());
+		System.out.println("数据库中的记录条数:" + sts.countAll());
+	}
+	
+	public void printFetchData(){
+		SavingsFetchCondition sfc = new SavingsFetchCondition();
+		sfc.setSavingsProvince("上海市");
+		sfc.setSavingsCity("上海市");
+		sfc.setSavingsBank("天津银行");
+		sfc.setSavingsCurrency("人民币");
+		System.out.println("产品个数："+savingsService.findByUserCondition(sfc).size());
+	}
+}

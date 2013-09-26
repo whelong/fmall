@@ -1,0 +1,27 @@
+/**
+ * 
+ */
+package com.fmall.springmvc.daoexample.dao;
+
+import java.util.List;
+
+import com.fmall.springmvc.generate.pojo.SavingsProduct;
+
+/**
+ * @author Administrator
+ *
+ */
+public interface ISavingsProduct {
+
+    public int insert(SavingsProduct user);
+    
+    public int update(User user);
+   
+    public int delete(String userName);
+   
+    public List selectAll();
+   
+    public int countAll();
+   
+    public User findByUserName(String userName);
+}

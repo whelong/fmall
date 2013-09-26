@@ -1,0 +1,45 @@
+1379673289484	Rename type 'ISearchSavings'
+1379673449234	Delete element
+1379674083187	Encapsulate field 'savingsProvince'
+1379674103125	Encapsulate field 'savingsCity'
+1379674107484	Encapsulate field 'savingsCurrency'
+1379674120875	Encapsulate field 'savingsType'
+1379674125000	Encapsulate field 'savingsTerm'
+1379674128796	Encapsulate field 'savingsBank'
+1379674132484	Encapsulate field 'productName'
+1379674138250	Encapsulate field 'productInterestRate'
+1379674150000	Encapsulate field 'startAmount'
+1379674162406	Encapsulate field 'productComments'
+1379694426609	Encapsulate field 'savingsRegion'
+1379694431703	Encapsulate field 'savingsCurrency'
+1379694434562	Encapsulate field 'savingsType'
+1379694437484	Encapsulate field 'savingsTerm'
+1379694440468	Encapsulate field 'savingsBank'
+1379769803953	Move file
+1379770246593	Copy file
+1379770451843	Copy file
+1379770585937	Delete element
+1379770614828	Move compilation unit
+1379771159953	Copy compilation unit
+1379771188968	Rename type 'ISavingsMapper'
+1379772753140	Rename resource 'SavingsProduct.xml'
+1379773566531	Encapsulate field 'id'
+1379775288171	Copy file
+1379775619906	Delete element
+1379775622375	Delete element
+1379775631765	Delete element
+1379775634015	Delete element
+1379775636296	Delete element
+1379775638375	Delete element
+1379775647515	Delete element
+1379775649734	Delete element
+1379775670625	Delete element
+1379775674609	Delete element
+1379775677218	Delete element
+1379775759546	Copy file
+1379776551843	Rename method 'findByUserName'
+1379776658906	Move 1 resources to 'service'
+1379777946625	Copy file
+1379778011875	Copy file
+1379778042296	Copy file
+1379778253890	Rename resource 'SavingsProductService.java'

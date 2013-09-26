@@ -1,0 +1,105 @@
+/**
+ * 
+ */
+package com.fmall.springmvc.daoexample.service.impl;
+
+import java.util.List;
+
+import com.fmall.springmvc.daoexample.service.SavingsTypeService;
+import com.fmall.springmvc.generate.pojo.SavingsType;
+
+/**
+ * @author Administrator
+ *
+ */
+public class SavingsTypeServiceImpl implements SavingsTypeService {
+
+	/**
+	 * 
+	 */
+	public SavingsTypeServiceImpl() {
+		// TODO Auto-generated constructor stub
+	}
+
+	/* (non-Javadoc)
+	 * @see com.fmall.springmvc.daoexample.service.SavingsTypeService#insert(com.fmall.springmvc.generate.pojo.SavingsType)
+	 */
+	@Override
+	public int insert(SavingsType st) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	/* (non-Javadoc)
+	 * @see com.fmall.springmvc.daoexample.service.SavingsTypeService#update(com.fmall.springmvc.generate.pojo.SavingsType)
+	 */
+	@Override
+	public int update(SavingsType sr) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	/* (non-Javadoc)
+	 * @see com.fmall.springmvc.daoexample.service.SavingsTypeService#delete(int)
+	 */
+	@Override
+	public int delete(int savingsTypeId) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	/* (non-Javadoc)
+	 * @see com.fmall.springmvc.daoexample.service.SavingsTypeService#selectAll()
+	 */
+	@Override
+	public List selectAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	/* (non-Javadoc)
+	 * @see com.fmall.springmvc.daoexample.service.SavingsTypeService#countAll()
+	 */
+	@Override
+	public int countAll() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	/* (non-Javadoc)
+	 * @see com.fmall.springmvc.daoexample.service.SavingsTypeService#findById(int)
+	 */
+	@Override
+	public SavingsType findById(int savingsTypeId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	/* (non-Javadoc)
+	 * @see com.fmall.springmvc.daoexample.service.SavingsTypeService#findByCurrency(java.lang.String)
+	 */
+	@Override
+	public List findByCurrency(String currencyName) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	/* (non-Javadoc)
+	 * @see com.fmall.springmvc.daoexample.service.SavingsTypeService#findByTypeName(java.lang.String)
+	 */
+	@Override
+	public List findByTypeName(String savingsTypeName) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	/* (non-Javadoc)
+	 * @see com.fmall.springmvc.daoexample.service.SavingsTypeService#findByTerm(java.lang.String)
+	 */
+	@Override
+	public List findByTerm(String savingsTerm) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

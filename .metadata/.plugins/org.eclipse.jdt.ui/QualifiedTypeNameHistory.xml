@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="com.fmall.springmvc.javabean.savings.SavingsProduct"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="com.mybatis.TestMybatis"/>
+<fullyQualifiedTypeName name="com.fmall.springmvc.daoexample.service.SavingsService"/>
+<fullyQualifiedTypeName name="com.fmall.springmvc.daoexample.dao.SavingsDao"/>
+<fullyQualifiedTypeName name="com.fmall.springmvc.generate.pojo.SavingsBank"/>
+<fullyQualifiedTypeName name="com.fmall.springmvc.generate.pojo.SavingsProductExample.Criteria"/>
+<fullyQualifiedTypeName name="com.fmall.springmvc.generate.pojo.SavingsProductExample"/>
+<fullyQualifiedTypeName name="com.mybatis.TestSavingsProduct"/>
+<fullyQualifiedTypeName name="com.fmall.springmvc.generate.pojo.SavingsRegion"/>
+<fullyQualifiedTypeName name="com.fmall.springmvc.generate.pojo.SavingsType"/>
+<fullyQualifiedTypeName name="com.fmall.springmvc.daoexample.dao.SavingsBankDao"/>
+<fullyQualifiedTypeName name="com.fmall.springmvc.daoexample.dao.SavingsRegionDao"/>
+<fullyQualifiedTypeName name="com.fmall.springmvc.daoexample.dao.SavingsTypeDao"/>
+<fullyQualifiedTypeName name="com.fmall.springmvc.daoexample.service.SavingsRegionService"/>
+<fullyQualifiedTypeName name="com.fmall.springmvc.daoexample.service.SavingsBankService"/>
+<fullyQualifiedTypeName name="com.fmall.springmvc.daoexample.service.SavingsTypeService"/>
+<fullyQualifiedTypeName name="com.fmall.springmvc.javabean.savings.SavingsFetchCondition"/>
+</qualifiedTypeNameHistroy>

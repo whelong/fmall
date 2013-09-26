@@ -1,0 +1,13 @@
+/**
+ * 
+ */
+package com.fmall.springmvc.generate.mapper;
+
+/**
+ * @author WHL
+ *
+ */
+public interface SavingsMapper {
+
+	
+}

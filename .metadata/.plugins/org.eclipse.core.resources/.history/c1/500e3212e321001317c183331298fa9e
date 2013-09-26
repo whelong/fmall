@@ -1,0 +1,15 @@
+/**
+ * 
+ */
+package com.fmall.springmvc.service.savings;
+
+import com.fmall.springmvc.javabean.savings.SavingsProduct;
+
+/**
+ * @author Administrator
+ *
+ */
+public interface ISavingsService {
+	public SavingsProduct sp;
+	public void fetchSavingsProducts();
+}

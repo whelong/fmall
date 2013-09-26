@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" ?>  <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fmall.springmvc.daoexample.dao.SavingsDao">
+	<select id="countAll" resultType="int">  <!-- 查询表中记录总数 -->
+		select count(*) c from savings_detail;
+	</select>
+	 <!-- 查询表中的所有储蓄产品 -->
+	<select id="selectAll" resultType="list">
+		select * from savings_detail order by savings_product_id asc
+	</select>
+	<insert id="insert" parameterType="com.fmall.springmvc.generate.pojo.SavingsProduct">    <!-- 向数据库中插入储蓄产品 -->
+		insert into savings_detail(bank_id,savings_type_id,region_id,product_interest_rate,created_date,created_by,product_comments,product_name,start_amt)
+		values(#{bankId},#{savingsTypeId},#{regionId},#{productInterestRate},#{createdDate},#{createdBy},#{productComments},#{productName},#{startAmt})
+	</insert>
+	<update id="update" parameterType="com.fmall.springmvc.generate.pojo.SavingsProduct">     <!-- 更新库中的储蓄产品 -->
+		update savings_detail set
+		bank_id=#{bankId},savings_type_id=#{savingsTypeId},region_id=#{regionId},product_interest_rate=#{productInterestRate},modified_date=#{modifiedDate},modified_by=#{modifiedBy},product_comments=#{productComments},product_name=#{productName},start_amt=#{startAmt}
+		where savings_product_id=#{savingsProductId}
+	</update>
+	<delete id="delete" parameterType="int">    <!-- 删除储蓄产品 -->
+		delete from savings_detail where savings_product_id=#{id}
+	</delete>
+	<select id="findById" parameterType="int"
+		resultType="com.fmall.springmvc.generate.pojo.SavingsProduct"> <!-- 根据产品ID查找储蓄产品 -->
+		select * from savings_detail where savings_product_id=#{savingsProductId}
+	</select>
+	<select id="findByUserCondition" parameterType="com.fmall.springmvc.javabean.savings.SavingsFetchCondition"
+		resultType="com.fmall.springmvc.generate.pojo.SavingsProduct"> <!-- 根据用户选择条件查找储蓄产品 -->
+		select * from savings_detail 
+		where ( case when #{savingsBank} is null <!-- 用户没有选择银行 --> 
+				then 
+					1=1 
+				else <!-- 用户选择了银行 -->
+					bank_id in (select bank_id from savings_bank where bank_name=#{savingsBank}) 
+				end
+			   ) 
+		and (	case when #{savingsType} is null <!-- 用户没有选择储蓄方式 -->
+				then 
+					case when #{savingsTerm} is null <!-- 用户没有选择储蓄方式和储蓄期限-->
+				 	then 
+				 		case when #{savingsCurrency} is null <!-- 用户没有选择储蓄方式、储蓄期限或币种-->
+				 	  	then 
+				 	  		1=1 
+				 	  	else <!-- 用户没有选择储蓄方式或储蓄期限，只选择了币种-->
+				 	  		savings_type_id in (select savings_type_id 
+				 	  							from savings_type 
+												where currency_name=#{savingsCurrency} 
+												) 
+						end 
+				 	else <!-- 用户没有选择储蓄方式，但选择了储蓄期限-->
+				 		case when #{savingsCurrency} is null <!-- 用户没有选择储蓄方式或币种，只选择了储蓄期限-->
+				 		then 
+				 			savings_type_id in (select savings_type_id 
+				 	  							from savings_type 
+												where savings_term=#{savingsTerm} 
+												) 
+						else <!-- 用户没有选择储蓄方式，但选择了储蓄期限和币种-->
+							savings_type_id in (select savings_type_id 
+				 	  							from savings_type 
+												where savings_term=#{savingsTerm} 
+												and currency_name=#{savingsCurrency} 
+												) 
+				 		end
+				 	end 
+				 else <!-- 用户选择了储蓄方式 -->
+				 	case when #{savingsTerm} is null <!-- 用户选择了储蓄方式， 但没有选择储蓄期限 -->
+				 	then 
+				 		case when #{savingsCurrency} is null <!-- 用户没有选择储蓄期限或币种， 只选择了储蓄方式 -->
+				 		then 
+				 			savings_type_id in (select savings_type_id 
+				 	  							from savings_type 
+												where savings_type_name=#{savingsType} 
+												) 
+						else <!-- 用户没有选择储蓄期限，但选择了储蓄方式和币种 -->
+							savings_type_id in (select savings_type_id 
+				 	  							from savings_type 
+												where savings_type_name=#{savingsType} 
+												and currency_name=#{savingsCurrency} 
+												) 
+						end 
+					else 
+						case when #{savingsCurrency} is null 
+						then 
+							savings_type_id in (select savings_type_id 
+				 	  							from savings_type 
+												where savings_type_name=#{savingsType} 
+												and savings_term=#{savingsTerm} 
+												) 
+						else 
+							savings_type_id in (select savings_type_id 
+				 	  							from savings_type 
+												where savings_type_name=#{savingsType} 
+												and savings_term=#{savingsTerm} 
+												and currency_name=#{savingsCurrency} 
+												) 
+						end 
+					end 
+				 end
+			) 
+		and (	case when #{savingsProvince} is null 
+				then 
+					case when #{savingsCity} is null 
+					then 
+						1=1 
+					else 
+						region_id in (select region_id 
+									  from savings_region 
+									  where city=#{savingsCity} 
+									  ) 
+					end 
+				else 
+					case when #{savingsCity} is null 
+					then 
+						region_id in (select region_id 
+									  from savings_region 
+									  where province=#{savingsProvince} 
+									  ) 
+					else 
+						region_id in (select region_id 
+									  from savings_region 
+									  where province=#{savingsProvince} 
+									  and city=#{savingsCity} 
+									  ) 
+					end 
+				end 
+			) 
+	</select>
+</mapper>

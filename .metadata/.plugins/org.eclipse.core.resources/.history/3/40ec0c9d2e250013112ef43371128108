@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>  <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fmall.springmvc.daoexample.dao.SavingsTypeDao">
+	<select id="countAll" resultType="int">  <!-- 查询表中记录总数 -->
+		select count(*) c from savings_type;
+	</select>
+	 <!-- 查询表中的所有储蓄类型 -->
+	<select id="selectAll" resultType="list">   
+		select * from savings_type order by savings_type_id asc
+	</select>
+	<insert id="insert" parameterType="com.fmall.springmvc.daoexample.pojo.SavingsType">    <!-- 向数据库中插入城市 -->
+		insert into savings_type(currency_name,savings_type_name,savings_term)
+		values(#{currencyName},#{savingsTypeName},#{savingsTerm})
+	</insert>
+	<update id="update" parameterType="com.fmall.springmvc.daoexample.pojo.SavingsType">     <!-- 更新库中的城市 -->
+		update savings_type set
+		currency_name=#{currencyName},savings_type_name=#{savingsTypeName},savings_term=#{savingsTerm}
+		where savings_type_id=#{savingsTypeId}
+	</update>
+	<delete id="delete" parameterType="int">    <!-- 删除城市 -->
+		delete from savings_type where savings_type_id=#{savingsTypeId}
+	</delete>
+	<select id="findById" parameterType="int"
+		resultType="com.fmall.springmvc.daoexample.pojo.SavingsType"> <!-- 根据城市ID查找地区 -->
+		select * from savings_type where savings_type_id=#{savingsTypeId}
+	</select>
+	<select id="findByCurrency" parameterType="String"
+		resultType="com.fmall.springmvc.daoexample.pojo.SavingsType"> <!-- 根据城市名称查找地区 -->
+		select * from savings_type where currency_name=#{currencyName}
+	</select>
+	<select id="findByTypeName" parameterType="String"
+		resultType="com.fmall.springmvc.daoexample.pojo.SavingsType"> <!-- 根据省份查找地区 -->
+		select * from savings_type where savings_type_name=#{savingsTypeName}
+	</select>
+	<select id="findByTerm" parameterType="String"
+		resultType="com.fmall.springmvc.daoexample.pojo.SavingsType"> <!-- 根据省份查找地区 -->
+		select * from savings_type where savings_term=#{savingsTerm}
+	</select>
+</mapper>
+

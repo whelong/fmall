@@ -1,0 +1,87 @@
+/**
+ * 
+ */
+package com.fmall.springmvc.daoexample.service.impl;
+
+import java.util.List;
+
+import com.fmall.springmvc.daoexample.service.SavingsProductService;
+import com.fmall.springmvc.generate.pojo.SavingsProduct;
+
+/**
+ * @author Administrator
+ *
+ */
+public class SavingsProductServiceImpl implements SavingsProductService {
+
+	/**
+	 * 
+	 */
+	public SavingsProductServiceImpl() {
+		// TODO Auto-generated constructor stub
+	}
+
+	/* (non-Javadoc)
+	 * @see com.fmall.springmvc.daoexample.service.SavingsProductService#insert(com.fmall.springmvc.generate.pojo.SavingsProduct)
+	 */
+	@Override
+	public int insert(SavingsProduct sp) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	/* (non-Javadoc)
+	 * @see com.fmall.springmvc.daoexample.service.SavingsProductService#update(com.fmall.springmvc.generate.pojo.SavingsProduct)
+	 */
+	@Override
+	public int update(SavingsProduct sp) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	/* (non-Javadoc)
+	 * @see com.fmall.springmvc.daoexample.service.SavingsProductService#delete(int)
+	 */
+	@Override
+	public int delete(int id) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	/* (non-Javadoc)
+	 * @see com.fmall.springmvc.daoexample.service.SavingsProductService#selectAll()
+	 */
+	@Override
+	public List selectAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	/* (non-Javadoc)
+	 * @see com.fmall.springmvc.daoexample.service.SavingsProductService#countAll()
+	 */
+	@Override
+	public int countAll() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	/* (non-Javadoc)
+	 * @see com.fmall.springmvc.daoexample.service.SavingsProductService#findById(int)
+	 */
+	@Override
+	public SavingsProduct findById(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	/* (non-Javadoc)
+	 * @see com.fmall.springmvc.daoexample.service.SavingsProductService#findBySelections(java.lang.String)
+	 */
+	@Override
+	public List<SavingsProduct> findGerneralBySelections(String selections) {
+		//
+		return null;
+	}
+
+}

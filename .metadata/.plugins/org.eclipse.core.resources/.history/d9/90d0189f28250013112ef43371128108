@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>  <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fmall.springmvc.daoexample.dao.SavingsRegionDao">
+	<select id="countAll" resultType="int">  <!-- 查询表中记录总数 -->
+		select count(*) c from savings_region;
+	</select>
+	 <!-- 查询表中的所有城市 -->
+	<select id="selectAll" resultType="list">   
+		select * from savings_region order by city asc
+	</select>
+	<insert id="insert" parameterType="com.fmall.springmvc.daoexample.pojo.SavingsRegion">    <!-- 向数据库中插入城市 -->
+		insert into savings_region(province,city)
+		values(#{province},#{city})
+	</insert>
+	<update id="update" parameterType="com.fmall.springmvc.daoexample.pojo.SavingsRegion">     <!-- 更新库中的城市 -->
+		update savings_region set
+		province=#{province},city=#{city}
+		where region_id=#{regionId}
+	</update>
+	<delete id="deleteById" parameterType="int">    <!-- 删除城市 -->
+		delete from savings_region where region_id=#{regionId}
+	</delete>
+		<delete id="deleteByCity" parameterType="String">    <!-- 删除城市 -->
+		delete from savings_region where city=#{city}
+	</delete>
+	<select id="findById" parameterType="int"
+		resultType="com.fmall.springmvc.daoexample.pojo.SavingsRegion"> <!-- 根据城市ID查找地区 -->
+		select * from savings_region where region_id=#{regionId}
+	</select>
+		<select id="findByCity" parameterType="String"
+		resultType="com.fmall.springmvc.daoexample.pojo.SavingsRegion"> <!-- 根据城市ID查找地区 -->
+		select * from savings_region where city=#{city}
+	</select>
+		<select id="findById" parameterType="int"
+		resultType="com.fmall.springmvc.daoexample.pojo.SavingsRegion"> <!-- 根据城市ID查找地区 -->
+		select * from savings_region where region_id=#{regionId}
+	</select>
+</mapper>
+

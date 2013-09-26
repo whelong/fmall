@@ -1,0 +1,31 @@
+/**
+ * 
+ */
+package com.fmall.springmvc.service.impl.savings;
+
+import com.fmall.springmvc.javabean.savings.SavingsProduct;
+import com.fmall.springmvc.service.savings.ISavingsService;
+
+/**
+ * @author Administrator
+ *
+ */
+public class SavingsServiceImpl implements ISavingsService {
+
+	/**
+	 * 
+	 */
+	public SavingsServiceImpl() {
+		// TODO Auto-generated constructor stub
+	}
+
+	/* (non-Javadoc)
+	 * @see com.fmall.springmvc.service.savings.ISavingsService#fetchSavingsProducts(com.fmall.springmvc.javabean.savings.SavingsProduct)
+	 */
+	@Override
+	public void fetchSavingsProducts(SavingsProduct sp) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

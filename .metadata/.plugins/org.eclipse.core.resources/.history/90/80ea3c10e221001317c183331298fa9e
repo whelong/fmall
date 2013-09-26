@@ -1,0 +1,20 @@
+/**
+ * 
+ */
+package com.fmall.springmvc.javabean.savings;
+
+/**
+ * @author Administrator
+ *
+ */
+public class SavingsProduct {
+
+	private String savingsProvince;
+	private String savingsCity;
+	private String savingsCurrency;
+	private String savingsType;
+	private String savingsTerm;
+	private String savingsBank;
+	
+	
+}

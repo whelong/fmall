@@ -1,0 +1,78 @@
+/**
+ * 
+ */
+package com.fmall.springmvc.javabean.savings;
+
+/**
+ * @author Administrator
+ *
+ */
+public class SavingsFetchCondition {
+
+	private String savingsRegion;
+	private String savingsCurrency;
+	private String savingsType;
+	private String savingsTerm;
+	private String savingsBank;
+	/**
+	 * @return the savingsRegion
+	 */
+	public String getSavingsRegion() {
+		return savingsRegion;
+	}
+	/**
+	 * @param savingsRegion the savingsRegion to set
+	 */
+	public void setSavingsRegion(String savingsRegion) {
+		this.savingsRegion = savingsRegion;
+	}
+	/**
+	 * @return the savingsCurrency
+	 */
+	public String getSavingsCurrency() {
+		return savingsCurrency;
+	}
+	/**
+	 * @param savingsCurrency the savingsCurrency to set
+	 */
+	public void setSavingsCurrency(String savingsCurrency) {
+		this.savingsCurrency = savingsCurrency;
+	}
+	/**
+	 * @return the savingsType
+	 */
+	public String getSavingsType() {
+		return savingsType;
+	}
+	/**
+	 * @param savingsType the savingsType to set
+	 */
+	public void setSavingsType(String savingsType) {
+		this.savingsType = savingsType;
+	}
+	/**
+	 * @return the savingsTerm
+	 */
+	public String getSavingsTerm() {
+		return savingsTerm;
+	}
+	/**
+	 * @param savingsTerm the savingsTerm to set
+	 */
+	public void setSavingsTerm(String savingsTerm) {
+		this.savingsTerm = savingsTerm;
+	}
+	/**
+	 * @return the savingsBank
+	 */
+	public String getSavingsBank() {
+		return savingsBank;
+	}
+	/**
+	 * @param savingsBank the savingsBank to set
+	 */
+	public void setSavingsBank(String savingsBank) {
+		this.savingsBank = savingsBank;
+	}
+
+}

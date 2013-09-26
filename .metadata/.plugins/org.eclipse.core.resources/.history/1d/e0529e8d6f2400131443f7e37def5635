@@ -1,0 +1,30 @@
+/**
+ * 
+ */
+package com.fmall.springmvc.daoexample.dao;
+
+import java.util.List;
+
+import com.fmall.springmvc.generate.pojo.SavingsProduct;
+
+/**
+ * @author WHL
+ *
+ */
+public interface SavingsBankDao {
+
+    public int insert(SavingsProduct sp);
+    
+    public int update(SavingsProduct sp);
+   
+    public int delete(int id);
+   
+    public List selectAll();
+   
+    public int countAll();
+   
+    public SavingsProduct findById(int id);
+    
+    public List findBySelections(String selections);
+
+}

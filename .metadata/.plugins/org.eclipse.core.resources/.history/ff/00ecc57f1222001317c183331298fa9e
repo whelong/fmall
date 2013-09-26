@@ -1,0 +1,45 @@
+/**
+ * 
+ */
+package com.fmall.springmvc.service.impl.savings;
+
+import java.util.List;
+
+import com.fmall.springmvc.javabean.savings.SavingsFetchCondition;
+import com.fmall.springmvc.javabean.savings.SavingsProduct;
+import com.fmall.springmvc.service.savings.ISavingsService;
+
+/**
+ * @author Administrator
+ *
+ */
+public class SavingsServiceImpl implements ISavingsService {
+
+	/**
+	 * 
+	 */
+	public SavingsServiceImpl() {
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public List<SavingsProduct> selectAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<SavingsProduct> savingsProductGeneralList(
+			SavingsFetchCondition sfcond) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<SavingsProduct> savingsProductDetailList(
+			SavingsFetchCondition sfcond) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

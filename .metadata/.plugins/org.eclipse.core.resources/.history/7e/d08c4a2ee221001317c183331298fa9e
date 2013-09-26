@@ -1,0 +1,47 @@
+/**
+ * 
+ */
+package com.fmall.springmvc.javabean.savings;
+
+/**
+ * @author Administrator
+ *
+ */
+public class SavingsProduct {
+
+	private String savingsProvince;
+	private String savingsCity;
+	private String savingsCurrency;
+	private String savingsType;
+	private String savingsTerm;
+	private String savingsBank;
+	private String productName;
+	private double productInterestRate;
+	private double startAmount;
+	private String productComments;
+	/**
+	 * @return the savingsProvince
+	 */
+	public String getSavingsProvince() {
+		return savingsProvince;
+	}
+	/**
+	 * @param savingsProvince the savingsProvince to set
+	 */
+	public void setSavingsProvince(String savingsProvince) {
+		this.savingsProvince = savingsProvince;
+	}
+	/**
+	 * @return the savingsCity
+	 */
+	public String getSavingsCity() {
+		return savingsCity;
+	}
+	/**
+	 * @param savingsCity the savingsCity to set
+	 */
+	public void setSavingsCity(String savingsCity) {
+		this.savingsCity = savingsCity;
+	}
+	
+}

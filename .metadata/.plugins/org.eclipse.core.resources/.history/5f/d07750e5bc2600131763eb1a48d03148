@@ -1,0 +1,102 @@
+/**
+ * 
+ */
+package com.fmall.springmvc.daoexample.service.impl;
+
+import java.util.List;
+
+import com.fmall.springmvc.dao.SavingsTypeDao;
+import com.fmall.springmvc.daoexample.service.SavingsTypeService;
+import com.fmall.springmvc.generate.pojo.SavingsType;
+
+/**
+ * @author WHL
+ *
+ */
+public class SavingsTypeServiceImpl implements SavingsTypeService {
+
+	SavingsTypeDao std;
+	/**
+	 * 
+	 */
+	public void setSavingsTypeDao(SavingsTypeDao std) {
+		this.std = std;
+	}
+	
+	public SavingsTypeDao getSavingsTypeDao(){
+		return this.std;
+	}
+
+	/* (non-Javadoc)
+	 * @see com.fmall.springmvc.daoexample.service.SavingsTypeService#insert(com.fmall.springmvc.generate.pojo.SavingsType)
+	 */
+	@Override
+	public int insert(SavingsType st) {
+		return this.std.insert(st);
+	}
+
+	/* (non-Javadoc)
+	 * @see com.fmall.springmvc.daoexample.service.SavingsTypeService#update(com.fmall.springmvc.generate.pojo.SavingsType)
+	 */
+	@Override
+	public int update(SavingsType sr) {
+		return this.std.update(sr);
+	}
+
+	/* (non-Javadoc)
+	 * @see com.fmall.springmvc.daoexample.service.SavingsTypeService#delete(int)
+	 */
+	@Override
+	public int delete(int savingsTypeId) {
+		return this.std.delete(savingsTypeId);
+	}
+
+	/* (non-Javadoc)
+	 * @see com.fmall.springmvc.daoexample.service.SavingsTypeService#selectAll()
+	 */
+	@Override
+	public List<SavingsType> selectAll() {
+		return this.std.selectAll();
+	}
+
+	/* (non-Javadoc)
+	 * @see com.fmall.springmvc.daoexample.service.SavingsTypeService#countAll()
+	 */
+	@Override
+	public int countAll() {
+		return this.std.countAll();
+	}
+
+	/* (non-Javadoc)
+	 * @see com.fmall.springmvc.daoexample.service.SavingsTypeService#findById(int)
+	 */
+	@Override
+	public SavingsType findById(int savingsTypeId) {
+		return this.std.findById(savingsTypeId);
+	}
+
+	/* (non-Javadoc)
+	 * @see com.fmall.springmvc.daoexample.service.SavingsTypeService#findByCurrency(java.lang.String)
+	 */
+	@Override
+	public List<SavingsType> findByCurrency(String currencyName) {
+		return this.std.findByCurrency(currencyName);
+	}
+
+	/* (non-Javadoc)
+	 * @see com.fmall.springmvc.daoexample.service.SavingsTypeService#findByTypeName(java.lang.String)
+	 */
+	@Override
+	public List<SavingsType> findByTypeName(String savingsTypeName) {
+		return this.std.findByTypeName(savingsTypeName);
+	}
+
+	/* (non-Javadoc)
+	 * @see com.fmall.springmvc.daoexample.service.SavingsTypeService#findByTerm(java.lang.String)
+	 */
+	@Override
+	public List<SavingsType> findByTerm(String savingsTerm) {
+		return this.std.findByTerm(savingsTerm);
+	}
+
+}

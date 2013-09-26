@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>  <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fmall.springmvc.daoexample.dao.SavingsDao">
+	<select id="countAll" resultType="int">  <!-- 查询表中记录总数 -->
+		select count(*) c from savings_detail;
+	</select>
+	 <!-- 查询表中的所有储蓄产品 -->
+	<select id="selectAll" resultType="list">
+		select * from savings_detail order by savings_product_id asc
+	</select>
+	<insert id="insert" parameterType="com.fmall.springmvc.generate.pojo.SavingsProduct">    <!-- 向数据库中插入储蓄产品 -->
+		insert into savings_detail(bank_id,savings_type_id,region_id,product_interest_rate,created_date,created_by,product_comments,product_name,start_amt)
+		values(#{bankId},#{savingsTypeId},#{regionId},#{productInterestRate},#{createdDate},#{createdBy},#{productComments},#{productName},#{startAmt})
+	</insert>
+	<update id="update" parameterType="com.fmall.springmvc.generate.pojo.SavingsProduct">     <!-- 更新库中的储蓄产品 -->
+		update savings_detail set
+		bank_id=#{bankId},savings_type_id=#{savingsTypeId},region_id=#{regionId},product_interest_rate=#{productInterestRate},modified_date=#{modifiedDate},modified_by=#{modifiedBy},product_comments=#{productComments},product_name=#{productName},start_amt=#{startAmt}
+		where savings_product_id=#{savingsProductId}
+	</update>
+	<delete id="delete" parameterType="int">    <!-- 删除储蓄产品 -->
+		delete from savings_detail where savings_product_id=#{id}
+	</delete>
+	<select id="findById" parameterType="int"
+		resultType="com.fmall.springmvc.generate.pojo.SavingsProduct"> <!-- 根据产品ID查找储蓄产品 -->
+		select * from savings_detail where savings_product_id=#{savingsProductId}
+	</select>
+	<select id="findByUserCondition" parameterType="com.fmall.springmvc.javabean.savings.SavingsFetchCondition"
+		resultType="com.fmall.springmvc.generate.pojo.SavingsProduct"> <!-- 根据用户选择条件查找储蓄产品 -->
+		select * from savings_detail where case when #{savingsBank} is null then 1=1 else bank_id in (select bank_id from savings_bank where bank_name=#{savingsBank}) end  and region_id in (select region_id from savings_region where province=#{savingsProvince} and city=#{savingsCity})
+	</select>
+</mapper>
